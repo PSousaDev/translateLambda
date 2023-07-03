@@ -1,8 +1,8 @@
-# [EN] Serverless Example (AWS Lambda)
+# [EN] Translate function (AWS Lambda)
 
 ## Description
 
-The current project consists of a Serverless application with AWS Lambda, Typescript, and Serverless Framework, focusing on implementing design patterns, unit testing, commit standardization, and staging scenarios. The goal is to improve performance and organize future developed applications.
+The current project was thought about using a function for global translation of my personal portfolio. The architecture was based on a design by a great friend [Iuri Aguiar](https://github.com/iuriaguiarr/Serverless) together with the behavioral and structural logic of the Serverless framework, which I learned from a great tutor [Erick Wendell](https://www.linkedin.com/in/erickwendel/)
 
 ## Dependencies
 
@@ -12,6 +12,7 @@ The main dependencies used in this project are:
 - Jest and Babel: used to perform unit tests.
 - Commitizen, Commitlint and Husky: used to standardize commits.
 - @hapi/joi: used to validate parameters forwarded through HTTP requests.
+- Aws-sdk: for using the various AWS services including translate which serves to perform the translation
 
 ## Structure
 
@@ -19,7 +20,7 @@ Next, the folder structure used in this project:
 
 - `src`: main source code folder.
   - `config`: folder used to store environment variables and other necessary configurations.
-  - `example`: route example folder, including cases with and without parameter passing.
+  - `translate`: folder for principal route
     - `controllers`: folder used to control endpoints.
     - `services`: folder used to execute the service designated to endpoints.
     - `models`: folder with parameter validators.
@@ -47,11 +48,11 @@ The main references used in this project were:
 - [Jest documentation](https://jestjs.io/pt-BR/docs/getting-started)
 - [AWS Lambda documentation](https://docs.aws.amazon.com/lambda/index.html)
 
-# [PT] Serverless Example (AWS Lambda)
+# [PT] Função de tradução (AWS Lambda)
 
 ## Descrição
 
-O projeto atual consiste em uma aplicação Serverless com AWS Lambda, Typescript e Serverless Framework, tendo como foco a implementação de padrões de projeto, testes unitários, padronização de commits e cenários de homologação. O objetivo é melhorar a performance e organizar as aplicações desenvolvidas futuramente.
+O projeto atual foi pensado a respeito do uso de uma função para tradução a nível global do meu portifolio pessoal.A arquitetura foi baseada em uma na concepção de um grande amigo [Iuri Aguiar](https://github.com/iuriaguiarr/Serverless-example) adjunto da logica comportamental e estrutural do framework Serverless cuja a qual aprendi com um grande tutor [Erick Wendell](https://www.linkedin.com/in/erickwendel/)
 
 ## Dependências
 
@@ -61,6 +62,7 @@ As principais dependências utilizadas neste projeto são:
 - Jest e Babel: utilizados para a realização de testes unitários.
 - Commitizen, Commitlint e Husky: utilizados para padronizar os commits.
 - @hapi/joi: utilizado para validar os parâmetros encaminhados através de requisições http.
+- Aws-sdk:para utilização dos diversos serviços da AWS incluindo o translate o qual serve para realizar a tradução
 
 ## Estrutura
 
@@ -68,7 +70,7 @@ A seguir, a estrutura de pastas utilizada neste projeto:
 
 - `src`: pasta principal do código-fonte.
   - `config`: pasta utilizada para armazenar as variáveis de ambiente e outras configurações necessárias.
-  - `example`: pasta de exemplo de rota, incluindo casos com e sem passagem de parâmetros.
+  - `translate`: pasta da rota principal
     - `controllers`: pasta utilizada para controlar os endpoints.
     - `services`: pasta utilizada para executar o serviço designado para os endpoints.
     - `models`: pasta com validadores de parâmetros.

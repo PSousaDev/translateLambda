@@ -5,8 +5,8 @@ import { Translate } from "@aws-sdk/client-translate";
 export class TranslateService {
   constructor(
     private readonly responseHandler = new ResponseHandlerUtil(),
-    private readonly logger = new LoggerUtil(TranslateService.name),
-    private readonly translateClient = new Translate({
+    readonly logger = new LoggerUtil(TranslateService.name),
+    readonly translateClient = new Translate({
       region: process.env.AWS_REGION,
     })
   ) {}
