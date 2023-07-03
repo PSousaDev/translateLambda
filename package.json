@@ -1,0 +1,40 @@
+{
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@babel/preset-env": "^7.21.5",
+    "@babel/preset-typescript": "^7.21.5",
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
+    "@types/aws-lambda": "^8.10.115",
+    "@types/hapi__joi": "^17.1.9",
+    "@types/jest": "^29.5.1",
+    "babel-jest": "^29.5.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.3",
+    "jest": "^29.5.0",
+    "serverless-offline": "^12.0.4",
+    "serverless-plugin-typescript": "^2.1.4",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@aws-sdk/client-translate": "^3.363.0",
+    "@hapi/joi": "^17.1.1",
+    "aws-lambda": "^1.0.7",
+    "env-var": "^7.3.1"
+  },
+  "scripts": {
+    "start": "sls offline start --reloadHandler",
+    "test": "jest",
+    "commit": "git-cz",
+    "delete": "sls remove",
+    "deploy:qa": "sls deploy --stage qa",
+    "deploy:prod": "sls deploy --stage prod",
+    "prepare": "husky install"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

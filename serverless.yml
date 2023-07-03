@@ -1,0 +1,32 @@
+service: serverless-translate
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: ${opt:stage, "qa"}
+  environment: ${file(./src/config/env.${self:provider.stage}.json)}
+  region: ${self:provider.environment.Region}
+
+package:
+  individually: true
+  excludeDevDependencies: true
+  patterns:
+    - "!./src/tests"
+    - "!./.husky/"
+    - "!./babel.config.js"
+    - "!./commitlink.config.js"
+    - "!./jest.config.js"
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+
+functions:
+  translate:
+    handler: src/example/handler.post
+    events:
+      - http:
+          path: /
+          method: post
+          cors: true
