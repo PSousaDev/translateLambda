@@ -17,17 +17,15 @@ export class TranslateService {
       SourceLanguageCode: "auto",
       TargetLanguageCode: langToTranslate,
     };
+    const { TranslatedText } = await this.translateClient.translateText(params);
 
-    const { TranslatedText } = await this.translateClient
-      .translateText(params)
-      .promisse();
     return TranslatedText;
   }
   async main(event: translateBody) {
     const { langToTranslate, text } = event.body;
-
+    const finalText = await this.trasnlateText(text, langToTranslate);
     try {
-      return this.responseHandler.success({ body: data });
+      return this.responseHandler.success({ body: finalText });
     } catch (error) {
       this.logger.error(error.stack);
       return this.responseHandler.error();

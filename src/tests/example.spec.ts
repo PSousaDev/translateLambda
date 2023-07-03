@@ -8,7 +8,6 @@ describe("Example Module", () => {
     const event = { body: JSON.stringify(examplePostMock) } as APIGatewayEvent;
 
     const result = await post(event);
-
     expect(result.statusCode).toEqual(200);
   });
 });

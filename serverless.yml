@@ -24,7 +24,7 @@ plugins:
 
 functions:
   translate:
-    handler: src/example/handler.post
+    handler: src\translate\handler.post
     events:
       - http:
           path: /

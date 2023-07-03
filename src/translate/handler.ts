@@ -1,3 +1,3 @@
-import { ExamplePostController } from "./controllers/example-post.controller";
+import { TranslateController } from "./controllers/translate.controller";
 
-export const post = new ExamplePostController().main();
+export const post = new TranslateController().main();

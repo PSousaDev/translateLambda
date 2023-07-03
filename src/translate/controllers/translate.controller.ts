@@ -2,7 +2,7 @@ import { ExamplePostModel } from "../models/example-post.model";
 import { TranslateService } from "../services/translate.service";
 import { paramValidatorUtil } from "../../utils/param-validator.util";
 
-export class ExamplePostController {
+export class TranslateController {
   constructor(
     private readonly handler = new TranslateService(),
     private readonly validator = new ExamplePostModel()
