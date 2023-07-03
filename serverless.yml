@@ -7,6 +7,17 @@ provider:
   stage: ${opt:stage, "qa"}
   environment: ${file(./src/config/env.${self:provider.stage}.json)}
   region: ${self:provider.environment.Region}
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - translate:TranslateText
+          Resource: "*"
+        - Effect: Allow
+          Action:
+            - comprehend:DetectDominantLanguage
+          Resource: "*"
 
 package:
   individually: true
