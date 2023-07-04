@@ -28,6 +28,10 @@ package:
     - "!./babel.config.js"
     - "!./commitlink.config.js"
     - "!./jest.config.js"
+    - "!node_modules/.prisma/client/libquery_engine-*"
+    - "node_modules/.prisma/client/libquery_engine-rhel-*"
+    - "!node_modules/prisma/libquery_engine-*"
+    - "!node_modules/@prisma/engines/**"
 
 plugins:
   - serverless-plugin-typescript

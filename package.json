@@ -20,12 +20,14 @@
   "dependencies": {
     "@aws-sdk/client-translate": "^3.363.0",
     "@hapi/joi": "^17.1.1",
+    "@prisma/client": "^4.16.2",
     "aws-lambda": "^1.0.7",
-    "env-var": "^7.3.1"
+    "env-var": "^7.3.1",
+    "prisma": "^4.16.2"
   },
   "scripts": {
     "start": "sls offline start --reloadHandler",
-    "test": "jest",
+    "test": "jest --watchAll",
     "commit": "git-cz",
     "delete": "sls remove",
     "deploy:qa": "sls deploy --stage qa",
