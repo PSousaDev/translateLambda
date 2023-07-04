@@ -2,7 +2,7 @@
 
 ## Description
 
-The current project was thought about using a function for global translation of my personal portfolio. The architecture was based on a design by a great friend [Iuri Aguiar](https://github.com/iuriaguiarr/Serverless) together with the behavioral and structural logic of the Serverless framework, which I learned from a great tutor [Erick Wendell](https://www.linkedin.com/in/erickwendel/)
+The current project was thought about using a function for global translation of my personal portfolio. The architecture was based on a design by a great friend [Iuri Aguiar](https://github.com/iuriaguiarr/Serverless) together with the behavioral and structural logic of the Serverless framework, which I learned from a great tutor [Erick Wendel](https://www.linkedin.com/in/erickwendel/)
 
 ## Dependencies
 
@@ -52,7 +52,7 @@ The main references used in this project were:
 
 ## Descrição
 
-O projeto atual foi pensado a respeito do uso de uma função para tradução a nível global do meu portifolio pessoal.A arquitetura foi baseada em uma na concepção de um grande amigo [Iuri Aguiar](https://github.com/iuriaguiarr/Serverless-example) adjunto da logica comportamental e estrutural do framework Serverless cuja a qual aprendi com um grande tutor [Erick Wendell](https://www.linkedin.com/in/erickwendel/)
+O projeto atual foi pensado a respeito do uso de uma função para tradução a nível global do meu portifolio pessoal.A arquitetura foi baseada em uma na concepção de um grande amigo [Iuri Aguiar](https://github.com/iuriaguiarr/Serverless-example) adjunto da logica comportamental e estrutural do framework Serverless cuja a qual aprendi com um grande tutor [Erick Wendel](https://www.linkedin.com/in/erickwendel/)
 
 ## Dependências
 
