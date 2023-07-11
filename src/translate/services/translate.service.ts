@@ -1,4 +1,5 @@
 import { translateBody } from "../../@types/translateBody.type";
+import { PrismaService } from "../../database/prisma.service";
 import { LoggerUtil } from "../../utils/logger.util";
 import { ResponseHandlerUtil } from "../../utils/response-handlers.util";
 import { Translate } from "@aws-sdk/client-translate";
@@ -6,6 +7,7 @@ export class TranslateService {
   constructor(
     private readonly responseHandler = new ResponseHandlerUtil(),
     readonly logger = new LoggerUtil(TranslateService.name),
+    private prisma: PrismaService,
     readonly translateClient = new Translate({
       region: process.env.AWS_REGION,
     })
